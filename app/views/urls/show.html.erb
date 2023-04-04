@@ -1,0 +1,16 @@
+<h3>URL</h3>
+<p style="color: green"><%= notice %></p>
+<div>
+<p>
+  <strong>Long url:</strong>
+  <%= @long_url %>
+</p>
+
+<p>
+  <strong>Short url:</strong>
+  <%= link_to @short_url, shorten_path(short_url: @url.short_url) %>
+</p>
+
+<div>
+  <%= link_to "New", new_url_path, class: "btn btn-primary" %>
+</div>
